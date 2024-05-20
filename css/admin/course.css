@@ -1,0 +1,108 @@
+@import url('../components.css');
+@import url('main.css');
+@import url('main-body.css');
+
+.course-card {
+    width: 217px;
+    min-height: 208px;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    padding-bottom: 8px;
+}
+
+.course-avatar {
+    width: 83px;
+    height: 83px;
+    border-radius: 100%;
+    overflow: hidden;
+    margin: 28px auto 0;
+    border: 3px solid white;
+}
+
+.modal {
+    position: relative;
+    display: none;
+}
+
+.modal-background {
+    background-color: black;
+    min-height: 100vh;
+    min-width: 100vw;
+    opacity: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 998;
+}
+
+.modal-content {
+    width: 550px;
+    min-height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.modal-content form {
+    max-width: 400px;
+    align-items: center;
+    margin: 5% auto 0;
+}
+
+.modal-content form h1 {
+    font-size: 24px;
+    text-align: center;
+    color: #1C344F;
+}
+
+
+
+/*COURSE DETAILS*/
+.course-detail {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px auto 0;
+    width: 55vw;
+    padding: 30px;
+}
+
+/*.course-detail-inputs section{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: baseline;*/
+/*    flex-wrap: wrap;*/
+/*    row-gap: 30px;*/
+
+/*    select, input {*/
+/*        width: 47%;*/
+/*    }*/
+/*}*/
+
+/*.course-detail-inputs section{*/
+/*    display: flex;*/
+/*    justify-content: space-between;*/
+/*    align-items: baseline;*/
+/*    flex-wrap: wrap;*/
+/*    row-gap: 30px;*/
+
+/*    select, input {*/
+/*        width: 47%;*/
+/*    }*/
+/*}*/
+
+/*.input-box {*/
+/*    select, input {*/
+/*        width: 47%;*/
+/*    }*/
+/*}*/
+
+
+.course-details-buttons input {
+    width: 250px;
+    height: 42px;
+}

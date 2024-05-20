@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="../css/admin/user.css" rel="stylesheet">
+    <title>Students</title>
+</head>
+<body>
+
+<div class="board">
+    <!-- SIDE BAR -->
+    <aside>
+        <!-- SIDE BAR HEADER -->
+        <div class="sidebar-header">
+            <a href="../index.html"><span>My<span>Academy</span></span></a>
+        </div>
+
+        <!-- SIDE BAR MENU -->
+        <div class="sidebar-menu">
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="registrations.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Inscrições</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="courses.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Cursos</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul class="active-sidebar-menu">
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="students.html">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Alunos</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="instructors.html">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="admin.html">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li><a href="settings.html">
+                    <i class="fas fa-cogs"></i>
+                    <span>Settings</span>
+                </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="../index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-my-profile">
+                <div class="avatar">
+                    <img alt="" src="../resources/derciosinione2.jpg">
+                </div>
+
+                <div class="user-information">
+                    <p class="blackOpacity smallText">Administrador</p>
+                    <p class="bold blackText">Dercio Derone</p>
+                    <a href="settings.html">
+                        <button>Ver Perfil</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN ELEMENT  -->
+    <main id="main">
+        <!-- MAIN HEADER -->
+        <div class="main-header">
+            <div class="main-header-left">
+                <div class="main-menu-option">
+                    <i class="fas fa-bars menu-icon"></i>
+                </div>
+            </div>
+
+            <div class="main-header-right">
+                <div class="search-container">
+                    <input placeholder="Search..." type="text">
+                    <button class="btn-icon" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Circular avatar -->
+                <a href="account-profile.html">
+                    <div class="avatar">
+                        <img alt="" src="../resources/derciosinione2.jpg">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- MAIN BODY -->
+        <div class="main-body">
+
+            <div class="main-description">
+                <h2>Alunos</h2>
+                <div>
+                    <!--                    <button onclick=""><i class="fas fa-plus"></i> ADICIONAR</button>-->
+                    <button class="more-option-btn" onclick="toggleMoreOption()">MAIS OPÇÕES</button>
+                    <div class="more-option" id="more-option">
+                        <p>Mais opções</p>
+                        <hr>
+                        <div>
+                            <input id="situation1" name="situation" type="checkbox"> <label
+                                for="situation1">Inativos</label>
+                        </div>
+                        <div>
+                            <input id="situation2" name="situation" type="checkbox"> <label
+                                for="situation2">Aprovados</label>
+                        </div>
+
+                        <div>
+                            <input id="situation3" name="situation" type="checkbox"> <label for="situation3">Aguardando
+                            aprovação</label>
+                        </div>
+
+                        <div class="mt10 more-option-buttons">
+                            <button class="red-color" onclick="">Cancelar</button>
+                            <button class="" onclick="">Aplicar filtro</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-container">
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://plus.unsplash.com/premium_photo-1664868839907-2309d69b1361?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Dercio Sinione Derone</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> derciosinione@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 856 254</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Dercio Sinione Derone</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> derciosinione@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 856 254</p>
+                            <span class="span-label red-color">Reprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Ana Maria Silva</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> ana.msilva@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 123 456</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://plus.unsplash.com/premium_photo-1669879825881-6d4e4bde67d5?q=80&w=1886&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Bruno Pereira</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> bruno.pereira@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 234 567</p>
+                            <span class="span-label red-color">Reprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://images.unsplash.com/photo-1655874819398-c6dfbec68ac7?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Carla Oliveira</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> carla.oliveira@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 345 678</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Diego Costa</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> diego.costa@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 456 789</p>
+                            <span class="span-label red-color">Reprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://plus.unsplash.com/premium_photo-1674078693686-9310a3eabc1f?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Eliana Ribeiro</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> eliana.ribeiro@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 567 890</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://media.istockphoto.com/id/1479519856/pt/foto/portrait-of-men-looking-at-camera.jpg?s=1024x1024&w=is&k=20&c=rbQfxdOlvS8_EAzNuW4Rm1PU_4twhpjqyK0NpPXxC-w=">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Fábio Santos</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> fabio.santos@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 678 901</p>
+                            <span class="span-label red-color">Reprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://media.istockphoto.com/id/1336082303/pt/foto/portrait-of-stylish-young-african-man-posing-looking-away-wearing-a-black-hoodie-sunglasses.jpg?s=1024x1024&w=is&k=20&c=ryhpylUtaZG04NoJHc8nw27S4TVgLg0Ykfw7bRZRExM=">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Gabriela Martins</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> gabriela.martins@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 789 012</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://media.istockphoto.com/id/1417314427/pt/foto/portrait-of-man-in-black-outfit.jpg?s=1024x1024&w=is&k=20&c=HbXWbK571tWKeFfPUEEot_EmBVo21y8_0gOeS13cmq8=">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Henrique Lima</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> henrique.lima@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 890 123</p>
+                            <span class="span-label red-color">Reprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://media.istockphoto.com/id/1424925129/pt/foto/portrait-of-a-young-man-on-a-pink-background.jpg?s=1024x1024&w=is&k=20&c=Qhxp8a8u5JNpiOTzb3EP3B2n3z67f7vVWDDlh08Zdes=">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Isabela Duarte</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> isabela.duarte@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 901 234</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="user-card">
+                    <a href="students-detail.html">
+                        <div class="background-image">
+                            <img alt="" src="../Img/studentbg1.png">
+                        </div>
+
+                        <div class="user-avatar">
+                            <img alt="" class="img-cover"
+                                 src="https://plus.unsplash.com/premium_photo-1689551670902-19b441a6afde?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+                        </div>
+
+                        <div class="content-title">
+                            <p class="bold">Isabela Duarte</p>
+                            <p class="blackOpacity smallText"><i class="fas fa-book-reader"></i> Estudante</p>
+                        </div>
+
+                        <div class="content-description">
+                            <p class="overflow-text"><i class="far fa-envelope"></i> isabela.duarte@gmail.com</p>
+                            <p><i class="fas fa-phone-alt"></i> +351 912 901 234</p>
+                            <span class="span-label green-color">Aprovado</span>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <br>
+    </main>
+</div>
+
+</body>
+</html>

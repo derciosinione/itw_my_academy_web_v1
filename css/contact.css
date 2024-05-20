@@ -1,0 +1,54 @@
+@import url('main.css');
+
+p, label {
+    color: var(--text-color);
+}
+
+main > section {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.address-info {
+    min-width: 300px;
+    background-color: var(--cor-white);
+    padding: 50px 30px 30px;
+    border-radius: 10px;
+}
+
+.contact-us-message {
+    width: 550px;
+}
+
+.address-info i {
+    width: 65px;
+    height: 65px;
+    font-size: 30px;
+    background-color: red;
+    text-align: center;
+    align-content: center;
+    color: var(--cor-white);
+}
+
+.address-info > div {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: center;
+
+    div {
+        padding-top: 10px;
+    }
+}
+
+
+@media (max-width: 822px) {
+    main > section {
+        flex-wrap: wrap;
+    }
+
+    .address-info {
+        width: 500px;
+    }
+}

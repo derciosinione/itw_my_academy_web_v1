@@ -1,0 +1,147 @@
+@import url('main.css');
+@import url('course.css');
+
+.hero {
+    height: 330px;
+    background: rgba(0, 0, 0, 0.8);
+    align-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+.display-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.course-intro {
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    gap: 50px;
+    padding: 40px;
+    margin-top: 50px;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.star i {
+    color: var(--cor-yellow);
+    padding-right: 3px;
+}
+
+.course-intro span {
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.course-intro aside {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 4px;
+    border: 1px solid white;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.course-overview {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    gap: 50px;
+}
+
+.course-overview p {
+    color: var(--text-color);
+}
+
+.course-overview aside h5 {
+    font-weight: bold;
+    color: #6B6A75;
+}
+
+.options a {
+    color: white;
+    text-decoration: none;
+}
+
+.course-overview aside ul {
+    list-style-type: none;
+    background-color: white;
+    padding: 20px 20px 10px;
+    border-radius: 8px;
+    min-width: 360px;
+
+    li {
+        margin-bottom: 20px;
+    }
+}
+
+.course-overview aside ul li i {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.course-overview a {
+    width: 100%;
+}
+
+.course-overview > div h5 {
+    font-weight: bold;
+    color: #3a3a3a;
+}
+
+
+.video-frame {
+    height: 450px;
+    max-width: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+
+    iframe {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+
+    .course-intro {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .course-intro div {
+        text-align: center;
+    }
+
+    .course-intro .options {
+        justify-content: center;
+    }
+
+    .course-intro aside {
+        width: 450px;
+        height: 400px;
+    }
+}
+
+@media (max-width: 988px) {
+    .course-overview {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .video-frame {
+        margin: 30px auto 0;
+        height: 350px;
+    }
+}
+

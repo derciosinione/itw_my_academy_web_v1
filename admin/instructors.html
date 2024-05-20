@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../css/admin/user.css" rel="stylesheet">
+    <title>Docentes</title>
+</head>
+<body>
+
+<div class="board">
+    <!-- SIDE BAR -->
+    <aside>
+        <!-- SIDE BAR HEADER -->
+        <div class="sidebar-header">
+            <a href="../index.html"><span>My<span>Academy</span></span></a>
+        </div>
+
+        <!-- SIDE BAR MENU -->
+        <div class="sidebar-menu">
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="registrations.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Inscrições</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="courses.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Cursos</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="students.html">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Alunos</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="active-sidebar-menu">
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="instructors.html">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="admin.html">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li><a href="settings.html">
+                    <i class="fas fa-cogs"></i>
+                    <span>Settings</span>
+                </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="../index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-my-profile">
+                <div class="avatar">
+                    <img alt="" src="../resources/derciosinione2.jpg">
+                </div>
+
+                <div class="user-information">
+                    <p class="blackOpacity smallText">Administrador</p>
+                    <p class="bold blackText">Dercio Derone</p>
+                    <a href="settings.html">
+                        <button>Ver Perfil</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN ELEMENT  -->
+    <main id="main">
+        <!-- MAIN HEADER -->
+        <div class="main-header">
+            <div class="main-header-left">
+                <div class="main-menu-option">
+                    <i class="fas fa-bars menu-icon"></i>
+                </div>
+            </div>
+
+            <div class="main-header-right">
+                <div class="search-container">
+                    <input placeholder="Search..." type="text">
+                    <button class="btn-icon" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Circular avatar -->
+                <a href="account-profile.html">
+                    <div class="avatar">
+                        <img alt="" src="../resources/derciosinione2.jpg">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- MAIN BODY -->
+        <div class="main-body">
+
+            <div class="main-description">
+                <h2>Docentes</h2>
+
+                <div>
+                    <a href="create-instructor.html">
+                        <button onclick=""><i class="fas fa-plus"></i> ADICIONAR</button>
+                    </a>
+                    <button class="more-option-btn" onclick="toggleMoreOption()">MAIS OPÇÕES</button>
+                    <div class="more-option" id="more-option">
+                        <p>Mais opções</p>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards-container">
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+                <div class="user-card pb10 auto-height">
+
+                    <div class="background-image">
+                        <img alt="" src="../Img/studentbg1.png">
+                    </div>
+
+                    <div class="user-avatar">
+                        <img alt="" class="img-cover" src="../Img/docent-avatar1.jpg">
+                    </div>
+
+                    <div class="content-title">
+                        <p class="bold">Dercio Derone</p>
+                        <p class="blackOpacity smallText"><i class="fas fa-user-tie"></i> Docente</p>
+                    </div>
+
+                    <div class="content-description">
+                        <p class="overflow-text"><i class="far fa-envelope"></i> dsderone23@gmail.com</p>
+                        <p><i class="fas fa-phone-alt"></i> +351 923 923 726</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <br>
+    </main>
+</div>
+
+</body>
+</html>

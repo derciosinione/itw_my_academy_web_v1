@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <title>Sign Up</title>
+</head>
+<body>
+
+<div class="login-container">
+
+    <div class="bgImg">
+        <img alt="" src="Img/signupImg.png">
+    </div>
+
+    <div class="content">
+        <nav>
+            <a href="index.html"><span class="my-logo">My<span>Academy</span></span></a>
+            <span>tem uma conta? <a href="login.html">Entrar!</a></span>
+        </nav>
+
+        <section>
+
+            <form action="#" method="post">
+                <h1 class="fz27">Comece com MyAcademy </h1>
+                <p class="fz18 blackOpacity">Começar é fácil</p>
+
+                <div class="inputs">
+                    <input id="name" name="name" placeholder="Nome Completo" type="text">
+                    <input id="email" name="email" placeholder="Email" type="email">
+                    <input id="phoneNumber" name="email" placeholder="Contacto" type="text">
+                    <input id="" name="email" placeholder="Contacto" type="text">
+                    <input id="birthDay" name="birthDay" type="date">
+
+
+                    <div class="password-div">
+                        <input id="password" name="password" placeholder="Password" type="password">
+                        <span class="toggle-password" onclick="togglePasswordVisibility()"><i
+                                class="fas fa-eye blackOpacity"></i></span>
+                    </div>
+
+                    <div class="password-div">
+                        <input id="confirm-password" name="confirm-password" placeholder="Confirmar Password"
+                               type="password">
+                        <span class="toggle-password" onclick="toggleConfirmPasswordVisibility()"><i
+                                class="fas fa-eye blackOpacity"></i></span>
+                    </div>
+                    <input type="submit" value="Criar Conta">
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script src="js/login.js"></script>
+</div>
+</body>
+</html>

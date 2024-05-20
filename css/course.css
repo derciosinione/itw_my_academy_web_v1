@@ -1,0 +1,75 @@
+@import url('main.css');
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../Img/page-header.jpg") !important;
+}
+
+.our-courses {
+    text-align: center;
+    margin-top: 80px !important;
+    margin-bottom: 80px !important;
+}
+
+.our-courses > div {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.course-cards a {
+    text-decoration: none;
+}
+
+.course-cards h6 {
+    color: black;
+}
+
+.course-cards > div {
+    background-color: white;
+    width: 320px;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px auto 0;
+    cursor: pointer;
+}
+
+.course-img {
+    height: 250px;
+    overflow: hidden;
+}
+
+.course-img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.course-body {
+    height: 100%;
+    padding-top: 6px;
+}
+
+.course-body h6 {
+    font-weight: 350;
+}
+
+.course-body span {
+    color: var(--cor-white);
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 14px;
+}
+
+
+.our-courses nav {
+    margin: 0 auto;
+}
+
+@media (max-width: 887px) {
+    .our-courses section {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}

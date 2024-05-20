@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="../css/admin/user.css" rel="stylesheet">
+    <title>Students</title>
+</head>
+<body>
+
+<div class="board">
+    <!-- SIDE BAR -->
+    <aside>
+        <!-- SIDE BAR HEADER -->
+        <div class="sidebar-header">
+            <a href="../index.html"><span>My<span>Academy</span></span></a>
+        </div>
+
+        <!-- SIDE BAR MENU -->
+        <div class="sidebar-menu">
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="registrations.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Inscrições</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="courses.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Cursos</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul class="active-sidebar-menu">
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="students.html">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Alunos</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="instructors.html">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="admin.html">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li><a href="settings.html">
+                    <i class="fas fa-cogs"></i>
+                    <span>Settings</span>
+                </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="../index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-my-profile">
+                <div class="avatar">
+                    <img alt="" src="../resources/derciosinione2.jpg">
+                </div>
+
+                <div class="user-information">
+                    <p class="blackOpacity smallText">Administrador</p>
+                    <p class="bold blackText">Dercio Derone</p>
+                    <a href="settings.html">
+                        <button>Ver Perfil</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN ELEMENT  -->
+    <main id="main">
+
+        <div class="student-detail-header">
+            <div class="user-detail-bg-image">
+                <img src="../Img/studentdetail-background.png">
+            </div>
+
+            <div class="circular-avatar">
+                <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+            </div>
+        </div>
+
+        <section class="student-detail-section">
+            <div>
+                <h3>Dercio Sinione Derone</h3>
+                <p class="blackOpacity mt5"><i class="fas fa-book-reader"></i> Aluno</p>
+            </div>
+
+            <div class="student-detail-tab">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>Perfil</span>
+                        </a>
+                        <div class="active-tab mt5"></div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>Inscrições</span>
+                        </a>
+                        <div class="active-tab mt5" hidden></div>
+                    </li>
+                </ul>
+                <div class="line"></div>
+            </div>
+
+            <div class="student-detail-info">
+                <div>
+                    <div>
+                        <label>NIF</label>
+                        <span>453 242 532</span>
+                    </div>
+
+                    <div>
+                        <label>Email</label>
+                        <span>example@gmail.com</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label>Contacto</label>
+                        <span>+351 965 985 632</span>
+                    </div>
+
+                    <div>
+                        <label>Data de Nascimento</label>
+                        <span>12/02/2000</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div>
+                        <label>Status</label>
+                        <span>Aprovado</span>
+                    </div>
+
+                    <div>
+                        <label>Data de Cadastro</label>
+                        <span>12/02/2024</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="mt30">ADMITIR</button>
+
+        </section>
+    </main>
+</div>
+
+</body>
+</html>

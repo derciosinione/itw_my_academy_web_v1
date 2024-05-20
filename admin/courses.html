@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/quill@2.0.0-rc.4/dist/quill.core.css">
+    <link href="../css/admin/course.css" rel="stylesheet">
+    <title>Courses</title>
+</head>
+<body>
+
+<!-- MODAL -->
+<div class="modal" id="modalAddCourse">
+    <div class="modal-background" onclick="toggleModalAddCourse()"></div>
+
+    <div class="modal-content">
+        <form action="#" method="post">
+            <h1>Cadastrar Curso</h1>
+
+            <div class="add-inputs">
+                <label class="blackOpacity">
+                    <input placeholder="Nome do Curso" type="text" name="name">
+                </label>
+                <label for="category" hidden="hidden"></label>
+                <select id="category" class="custom-select" name="category">
+                    <option value="0" selected>Escolha a categoria</option>
+                    <option value="8">Banco de Dados</option>
+                    <option value="10">Ciência de Dados</option>
+                    <option value="11">Cloud Computing</option>
+                    <option value="13">Desenvolvimento de Aplicativos Móveis</option>
+                    <option value="7">Desenvolvimento Web</option>
+                    <option value="1">Diversos</option>
+                    <option value="5">Gestão</option>
+                    <option value="2">História</option>
+                    <option value="6">Matemática</option>
+                    <option value="3">Programação</option>
+                    <option value="4">Robótica</option>
+                    <option value="9">Segurança da Informação</option>
+                    <option value="12">Sistemas Operacionais</option>
+                </select>
+
+                <label class="blackOpacity">
+                    <input type="number" step="0.5" min="0" name="price" id="price" placeholder="(€) Preço">
+                </label>
+
+                <div>
+                    <input type="hidden" id="descriptionContent" name="description">
+                    <div id="descriptionEditor"></div>
+                </div>
+
+                <div>
+                    <input onclick="updateDescriptionContent()" onsubmit="updateDescriptionContent()" class="mb10"
+                           type="submit" value="ADICIONAR">
+                    <input class="red-color" onclick="hideModalAddCourse()" type="button" value="CANCELAR">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="board">
+    <!-- SIDE BAR -->
+    <aside>
+        <!-- SIDE BAR HEADER -->
+        <div class="sidebar-header">
+            <a href="../index.html"><span>My<span>Academy</span></span></a>
+        </div>
+
+        <!-- SIDE BAR MENU -->
+        <div class="sidebar-menu">
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="registrations.html">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Inscrições</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="active-sidebar-menu">
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="courses.html">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Cursos</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="students.html">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Alunos</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="instructors.html">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Docentes</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="admin.html">
+                        <i class="fas fa-user-shield"></i>
+                        <span>Admin</span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li><a href="settings.html">
+                    <i class="fas fa-cogs"></i>
+                    <span>Settings</span>
+                </a>
+                </li>
+            </ul>
+
+            <ul>
+                <div class="active-sidebar-menu-line"></div>
+                <li>
+                    <a href="../index.html">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-my-profile">
+                <div class="avatar">
+                    <img alt="" src="../resources/derciosinione2.jpg">
+                </div>
+
+                <div class="user-information">
+                    <p class="blackOpacity smallText">Administrador</p>
+                    <p class="bold blackText">Dercio Derone</p>
+                    <a href="settings.html">
+                        <button>Ver Perfil</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- MAIN ELEMENT  -->
+    <main>
+        <!-- MAIN HEADER -->
+        <div class="main-header">
+            <div class="main-header-left">
+                <div class="main-menu-option">
+                    <i class="fas fa-bars menu-icon"></i>
+                </div>
+            </div>
+
+            <div class="main-header-right">
+                <div class="search-container">
+                    <input placeholder="Search..." type="text">
+                    <button class="btn-icon" type="submit"><i class="fas fa-search"></i></button>
+                </div>
+
+                <!-- Circular avatar -->
+                <a href="account-profile.html">
+                    <div class="avatar">
+                        <img alt="" src="../resources/derciosinione2.jpg">
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <!-- MAIN BODY -->
+        <div class="main-body">
+
+            <!-- MAIN DESCRIPTION -->
+            <div class="main-description">
+                <h2>Cursos</h2>
+
+                <!-- OPTIONS -->
+                <div>
+                    <button onclick="toggleModalAddCourse()"><i class="fas fa-plus"></i> ADICIONAR</button>
+                    <button class="more-option-btn" onclick="toggleMoreOption()">MAIS OPÇÕES</button>
+                    <div class="more-option" id="more-option">
+                        <p>Mais opções</p>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- COURSES ITEMS -->
+            <div class="cards-container">
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-2.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Introdução ao Machine Learning</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Maria Silva</p>
+                            <div class="span-label blackBlue-color"><p>Data Science</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-3.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Desenvolvimento de Aplicativos Android</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> João Pereira</p>
+                            <div class="span-label blackBlue-color"><p>Mobile</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-4.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Marketing Digital para Iniciantes</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Ana Costa</p>
+                            <div class="span-label blackBlue-color"><p>Marketing</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-5.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">UX/UI Design: Fundamentos</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Carlos Mendes</p>
+                            <div class="span-label blackBlue-color"><p>Design</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-6.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">JavaScript Avançado</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Bruno Nunes</p>
+                            <div class="span-label blackBlue-color"><p>Programação</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-4.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Gestão de Projetos com Agile</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Fernanda Lima</p>
+                            <div class="span-label blackBlue-color"><p>Gestão</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-1.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Fotografia Digital</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Rafael Souza</p>
+                            <div class="span-label blackBlue-color"><p>Fotografia</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-2.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Culinária Gourmet</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Letícia Gomes</p>
+                            <div class="span-label blackBlue-color"><p>Gastronomia</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-5.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Introdução à Filosofia</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Marcos Oliveira</p>
+                            <div class="span-label blackBlue-color"><p>Humanidades</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-3.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Técnicas de Pintura em Aquarela</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Bianca Ribeiro</p>
+                            <div class="span-label blackBlue-color"><p>Arte</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-4.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Economia para Leigos</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Jorge Silva</p>
+                            <div class="span-label blackBlue-color"><p>Economia</p></div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="course-card transition-scale">
+                    <a href="course-detail.html">
+                        <div class="course-avatar">
+                            <img alt="" class="img-cover" src="../Img/courses-6.jpg">
+                        </div>
+                        <div class="content-title">
+                            <p class="bold mb5">Redação Criativa</p>
+                            <p class="blackOpacity smallText mb10"><i class="fas fa-user-tie"></i> Daniela Martins</p>
+                            <div class="span-label blackBlue-color"><p>Literatura</p></div>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <br>
+    </main>
+</div>
+
+<!-- Include Quill's JavaScript -->
+<script src="https://cdn.quilljs.com/1.3.6/quill.min.js"></script>
+<script>
+    // Initialize Quill
+    let quill = new Quill('#descriptionEditor', {
+        theme: 'snow', // Snow theme for a clean interface,
+    });
+
+    let descriptionContent = document.getElementById('descriptionContent');
+
+    loadDescriptionContent();
+
+    function loadDescriptionContent() {
+        if (descriptionContent.value !== null) {
+            quill.root.innerHTML = removeHtmlTags(descriptionContent.value);
+        }
+    }
+
+    function removeHtmlTags(input) {
+        let doc = new DOMParser().parseFromString(input, 'text/html');
+        return doc.body.textContent || "";
+    }
+
+    function updateDescriptionContent() {
+        descriptionContent.value = quill.root.innerHTML;
+    }
+</script>
+
+<script src="../js/course.js"></script>
+
+</body>
+</html>

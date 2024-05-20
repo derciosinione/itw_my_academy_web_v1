@@ -1,0 +1,73 @@
+@import url('../components.css');
+@import url('main.css');
+@import url('main-body.css');
+
+.main-body {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.setting-aside {
+    background-color: white;
+    border-radius: 8px;
+    height: 80vh;
+    min-width: 255px;
+    overflow: hidden;
+
+    h3 {
+        font-size: 16px;
+    }
+}
+
+.main-body section {
+    background-color: white;
+    width: 825px;
+    height: 466px;
+    border-radius: 8px;
+}
+
+.setting-aside .user-avatar {
+    height: 193px;
+    overflow: hidden;
+}
+
+.setting-aside nav{
+    margin-top: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.setting-aside nav ul {
+    list-style: none;
+    li {
+        height: 40px;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+
+        a {
+            color: #979797;
+            font-size: 16px;
+        }
+    }
+}
+
+.active-settings-menu {
+    background-color: #4880FF;
+
+    a {
+        color: white!important;
+    }
+}
+
+.setting-container {
+    /*background-color: #1C344F;*/
+    padding: 30px 40px;
+}
+
+.save-info-btn {
+    width: 156px!important;
+    height: 42px;
+}

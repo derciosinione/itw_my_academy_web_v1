@@ -1,0 +1,55 @@
+@import url('main.css');
+
+.hero {
+    height: 400px;
+}
+
+main > section p {
+    color: var(--text-color);
+}
+
+main > section {
+    display: flex;
+    gap: 20px;
+}
+
+main > section > div:first-child {
+    min-width: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.personal-info {
+    margin-top: 20px;
+}
+
+.personal-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-me {
+    padding-top: 15px;
+}
+
+
+.about-me p {
+    width: 95%;
+}
+
+@media (max-width: 700px) {
+    main > section > div:first-child {
+        height: 450px;
+        margin: 0 auto;
+    }
+
+    main > section {
+        flex-wrap: wrap;
+    }
+}
